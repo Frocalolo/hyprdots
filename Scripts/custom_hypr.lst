@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # --------------------------------------------------- // System
 pipewire                                               # audio/video server
 pipewire-alsa                                          # pipewire alsa client
