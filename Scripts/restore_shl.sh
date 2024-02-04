@@ -12,11 +12,23 @@ if [ $? -ne 0 ] ; then
 fi
 
 
+<<<<<<< HEAD
 if chk_list "myShell" "${shlList[@]}" ; then
     echo -e "\033[0;32m[SHELL]\033[0m detected // ${myShell}"
 else
     echo "Error: user shell not found"
     exit 1
+=======
+if [ -z "${myShell}" ] ; then
+    if pkg_installed zsh ; then
+        myShell="zsh"
+    elif pkg_installed fish ; then
+        myShell="fish"
+    else
+        echo -e "\033[0;33m[WARNING]\033[0m no shell detected..."
+        exit 0
+    fi
+>>>>>>> 99d9ede (adding sddm theme option)
 fi
 
 
@@ -54,6 +66,10 @@ if [[ "$(grep "/${USER}:" /etc/passwd | awk -F '/' '{print $NF}')" != "${myShell
     echo -e "\033[0;32m[SHELL]\033[0m changing shell to ${myShell}..."
     chsh -s "$(which ${myShell})"
 else
+<<<<<<< HEAD
     echo -e "\033[0;33m[SKIP]\033[0m ${myShell} is already set as shell..."
+=======
+    echo -e "\033[0;33m[SKIP]\033[0m ${myShell} is already configured..."
+>>>>>>> 99d9ede (adding sddm theme option)
 fi
 
