@@ -25,12 +25,12 @@ tooltip {
 	text-shadow: none;
     padding: 0px;
     border-radius: ${w_radius}px;
-    margin-${x1}: ${w_margin}px;
-    margin-${x2}: ${w_margin}px;
-    margin-${x3}: 0px;
-    padding-${x3}: ${w_paddin}px;
-    padding-${x4}: ${w_paddin}px;
-    margin-${x4}: 0px;
+    margin-top: ${w_margin}px;
+    margin-bottom: ${w_margin}px;
+    margin-left: 0px;
+    padding-left: ${w_paddin}px;
+    padding-right: ${w_paddin}px;
+    margin-right: 0px;
     color: @main-fg;
     animation: ws_normal 20s ease-in-out 1;
 }
@@ -38,10 +38,10 @@ tooltip {
 #workspaces button.active {
     background: @wb-act-bg;
     color: @wb-act-fg;
-    margin-${x3}: ${w_margin}px;
-    padding-${x3}: ${w_padact}px;
-    padding-${x4}: ${w_padact}px;
-    margin-${x4}: ${w_margin}px;
+    margin-left: ${w_margin}px;
+    padding-left: ${w_padact}px;
+    padding-right: ${w_padact}px;
+    margin-right: ${w_margin}px;
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -58,31 +58,31 @@ tooltip {
 	text-shadow: none;
     padding: 0px;
     border-radius: ${w_radius}px;
-    margin-${x1}: ${w_margin}px;
-    margin-${x2}: ${w_margin}px;
-    margin-${x3}: 0px;
-    padding-${x3}: ${w_paddin}px;
-    padding-${x4}: ${w_paddin}px;
-    margin-${x4}: 0px;
+    margin-top: ${w_margin}px;
+    margin-bottom: ${w_margin}px;
+    margin-left: 0px;
+    padding-left: ${w_paddin}px;
+    padding-right: ${w_paddin}px;
+    margin-right: 0px;
     color: @wb-color;
-    animation: tb_normal 20s ease-in-out 1;
+    animation: tb_normal 30s ease-in-out 1;
 }
 
 #taskbar button.active {
     background: @wb-act-bg;
     color: @wb-act-color;
-    margin-${x3}: ${w_margin}px;
-    padding-${x3}: ${w_padact}px;
-    padding-${x4}: ${w_padact}px;
-    margin-${x4}: ${w_margin}px;
-    animation: tb_active 20s ease-in-out 1;
+    margin-left: ${w_margin}px;
+    padding-left: ${w_padact}px;
+    padding-right: ${w_padact}px;
+    margin-right: ${w_margin}px;
+    animation: tb_active 30s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #taskbar button:hover {
     background: @wb-hvr-bg;
     color: @wb-hvr-color;
-    animation: tb_hover 20s ease-in-out 1;
+    animation: tb_hover 30s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
