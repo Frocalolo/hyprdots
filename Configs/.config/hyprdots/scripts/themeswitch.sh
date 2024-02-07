@@ -87,6 +87,25 @@ if [ ! -z "$(grep '^1|' "$ThemeCtl" | awk -F '|' '{print $3}')" ] ; then
 fi
 
 
+# kitty
+ln -fs $ConfDir/kitty/themes/${ThemeSet}.conf $ConfDir/kitty/themes/theme.conf
+killall -SIGUSR1 kitty
+
+
+# kvantum QT
+kvantummanager --set "${ThemeSet}"
+
+
+# qt5ct
+sed -i "/^color_scheme_path=/c\color_scheme_path=$ConfDir/qt5ct/colors/${ThemeSet}.conf" $ConfDir/qt5ct/qt5ct.conf
+IconSet=`awk -F "'" '$0 ~ /gsettings set org.gnome.desktop.interface icon-theme/{print $2}' $ConfDir/hypr/themes/${ThemeSet}.conf`
+sed -i "/^icon_theme=/c\icon_theme=${IconSet}" $ConfDir/qt5ct/qt5ct.conf
+
+
+# qt6ct
+sed -i "/^color_scheme_path=/c\color_scheme_path=$ConfDir/qt6ct/colors/${ThemeSet}.conf" $ConfDir/qt6ct/qt6ct.conf
+sed -i "/^icon_theme=/c\icon_theme=${IconSet}" $ConfDir/qt6ct/qt6ct.conf
+
 # gtk3
 sed -i "/^gtk-theme-name=/c\gtk-theme-name=${ThemeSet}" $ConfDir/gtk-3.0/settings.ini
 sed -i "/^gtk-icon-theme-name=/c\gtk-icon-theme-name=${gtkIcon}" $ConfDir/gtk-3.0/settings.ini
