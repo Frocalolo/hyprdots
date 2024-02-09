@@ -1,4 +1,5 @@
 N|Y|${HOME}|.zshrc .p10k.zsh|zsh oh-my-zsh-git zsh-theme-powerlevel10k pokemon-colorscripts-git
+Y|Y|${HOME}/.config/VSCodium/User|settings.json|vscodium-bin
 Y|Y|${HOME}/.config|dunst|dunst
 Y|Y|${HOME}/.config|fish|fish
 <<<<<<< HEAD
