@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # --------------------------------------------------- // System
 pipewire                                               # audio/video server
 pipewire-alsa                                          # pipewire alsa client
@@ -83,3 +84,4 @@ pokemon-colorscripts-git|zsh                           # display pokemon sprites
 # --------------------------------------------------- // Hyprdots
 hyprdots-ctl-git                                       # cli tool to manage hyprdots
 
+=======
